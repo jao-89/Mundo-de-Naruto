@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa de Vídeos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #searchBar {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .video-container {
+      margin-bottom: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pesquisar Vídeos</h1>
+  <input type="text" id="searchBar" placeholder="Digite o nome do vídeo...">
+
+  <div id="videos">
+    <div class="video-container" data-title="Gato engraçado">
+      <h3>Gato engraçado</h3>
+      <video width="320" controls>
+        <source src="video1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+
+    <div class="video-container" data-title="Como fazer café">
+      <h3>Como fazer café</h3>
+      <video width="320" controls>
+        <source src="video2.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+
+    <div class="video-container" data-title="Tutorial de programação">
+      <h3>Tutorial de programação</h3>
+      <video width="320" controls>
+        <source src="video3.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const videoContainers = document.querySelectorAll(".video-container");
+
+    searchBar.addEventListener("input", function () {
+      const searchTerm = searchBar.value.toLowerCase();
+
+      videoContainers.forEach(container => {
+        const title = container.getAttribute("data-title").toLowerCase();
+        if (title.includes(searchTerm)) {
+          container.classList.remove("hidden");
+        } else {
+          container.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
