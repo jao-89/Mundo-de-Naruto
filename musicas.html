@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha Página de Músicas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #f1f1f1;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #00ff99;
+    }
+    .music-player {
+      margin: 20px auto;
+      padding: 20px;
+      background: #2e2e2e;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎶 Minhas Músicas Favoritas</h1>
+
+  <div class="music-player">
+    <h2>Música 1 - Exemplo</h2>
+    <audio controls>
+      <source src="mc-negão.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+
+  <div class="music-player">
+    <h2>Música 2 - Exemplo</h2>
+    <audio controls>
+      <source src="twenty-one.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barra de Pesquisa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .search-box {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00cc99;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #009977;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Buscar Músicas</h1>
+
+  <form class="search-box" action="#" method="GET">
+    <input type="text" name="q" placeholder="Digite o nome da música...">
+    <input type="submit" value="Buscar">
+  </form>
+
+</body>
+</html>
